@@ -1,0 +1,24 @@
+# registry.gitlab.com/jorjpimm/dockerfiles/gcc7_qt
+
+FROM purplekarrot/gcc-7
+
+WORKDIR /build
+ENTRYPOINT []
+
+#ADD tools/setup_apt.sh ./setup_apt.sh
+#RUN . ./setup_apt.sh
+
+#ADD tools/install_core_dependencies.sh ./install_core_dependencies.sh
+#RUN . ./install_core_dependencies.sh
+
+#ADD tools/install_gcc7.sh ./install_gcc7.sh
+#RUN . ./install_gcc7.sh
+
+#ADD tools/install_boost.sh ./install_boost.sh
+#RUN . ./install_boost.sh
+
+#ADD tools/install_python3.sh ./install_python3.sh
+#RUN . ./install_python3.sh
+
+#ADD tools/install_qt.sh ./install_qt.sh
+#RUN . ./install_qt.sh
