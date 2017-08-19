@@ -1,7 +1,8 @@
+#!/bin/bash
+apt-get update
 
-apt install -y python3
-wget https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py
-# python3-pip
-#ln -s /usr/bin/python3 /usr/bin/python
-#ln -s /usr/bin/pip3 /usr/bin/pip
+apt install -y --no-install-recommends python3
+wget https://bootstrap.pypa.io/get-pip.py 
+python3 get-pip.py 
+
+rm -rf /var/lib/apt/lists/*
