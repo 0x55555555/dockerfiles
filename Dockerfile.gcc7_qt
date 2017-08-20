@@ -1,6 +1,6 @@
 # registry.gitlab.com/jorjpimm/dockerfiles/gcc7_qt
 
-FROM appcontainers/ubuntu:zesty
+FROM appcontainers/ubuntu:xenial
 
 WORKDIR /build
 
