@@ -1,10 +1,15 @@
-wget https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz
+#!/bin/sh
+TOOLSET=$1
+if [ -z "$TOOLSET" ]; then
+  echo "Error: invalid toolset specified $*";
+  exit 1;
+fi
 
+wget -q https://dl.bintray.com/boostorg/release/1.64.0/source/boost_1_64_0.tar.gz
 tar -zxf boost_1_64_0.tar.gz
-
 cd boost_1_64_0
 
-./bootstrap.sh
+./bootstrap.sh --with-toolset=${TOOLSET}
 ./b2 install -j8 \
   --with-filesystem \
   --with-system \

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 apt-get update
 
 apt install -y -qq --no-install-recommends libqt5core5a libqt5gui5 libqt5widgets5 qt5-qmake qtbase5-dev-tools

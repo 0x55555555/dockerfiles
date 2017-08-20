@@ -1,4 +1,5 @@
 #!/bin/bash
+
 apt-get update
 
 # Install tools
@@ -9,7 +10,7 @@ apt-get install -y -qq --no-install-recommends \
   make
 
 # Install cmake 3.9.1
-wget https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh
+wget -q https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh
 chmod +x ./cmake-3.9.1-Linux-x86_64.sh
 
 mkdir -p /opt/cmake
