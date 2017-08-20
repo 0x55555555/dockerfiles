@@ -16,3 +16,6 @@ update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60 \
 
 apt-get -qq purge --auto-remove -y software-properties-common
 rm -rf /var/lib/apt/lists/*
+
+# hack out lto... not a great idea, but smaller image...?
+rm /usr/lib/gcc/x86_64-linux-gnu/7/lto1

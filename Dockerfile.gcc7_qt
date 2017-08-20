@@ -4,8 +4,6 @@ FROM appcontainers/ubuntu:xenial
 
 WORKDIR /build
 
-RUN apt-get update
-
 ADD tools/install_core_dependencies.sh ./install_core_dependencies.sh
 RUN . ./install_core_dependencies.sh
 

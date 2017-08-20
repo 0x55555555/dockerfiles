@@ -16,6 +16,8 @@ touch /usr/include/libdrm/GL/gl.h
 rm -r \
   qt_pkg \
   /usr/share/qt5 \
+  /usr/lib/x86_64-linux-gnu/dri/* \
+  /usr/lib/x86_64-linux-gnu/perl/* \
   /usr/lib/x86_64-linux-gnu/libLLVM-4.0.so*
 
 
