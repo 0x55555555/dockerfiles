@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 TOOLSET=$1
 if [ -z "$TOOLSET" ]; then
   echo "Error: invalid toolset specified $*";
