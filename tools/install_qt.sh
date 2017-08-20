@@ -1,7 +1,9 @@
 #!/bin/bash
 
-[ -f "/usr/lib/x86_64-linux-gnu/libLLVM-4.0.so*" ]
+[ -f "/usr/lib/x86_64-linux-gnu/libLLVM-4.0.so" ]
 LLVM_ALREADY_INSTALLED=$?
+[ -d "/usr/lib/x86_64-linux-gnu/perl/" ]
+PERL_ALREADY_INSTALLED=$?
 
 apt-get update
 
@@ -20,10 +22,15 @@ touch /usr/include/libdrm/GL/gl.h
 rm -r \
   qt_pkg \
   /usr/share/qt5 \
-  /usr/lib/x86_64-linux-gnu/dri/* \
-  /usr/lib/x86_64-linux-gnu/perl/*
+  /usr/lib/x86_64-linux-gnu/dri/*
 
-if (( LLVM_ALREADY_INSTALLED == 0 )); then
+if (( PERL_ALREADY_INSTALLED != 0 )); then
+  echo "Removing installed perl modules"
+  rm -r /usr/lib/x86_64-linux-gnu/perl/*
+fi
+
+if (( LLVM_ALREADY_INSTALLED != 0 )); then
+  echo "Removing installed llvm modules"
   rm -r /usr/lib/x86_64-linux-gnu/libLLVM-4.0.so*
 fi
 
