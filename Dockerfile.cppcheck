@@ -1,0 +1,6 @@
+# registry.gitlab.com/jorjpimm/dockerfiles/gcc6_qt
+
+FROM jorj/gcc5_qt5
+
+ADD tools/install_cppcheck.sh ./install_cppcheck.sh
+RUN ./install_cppcheck.sh
