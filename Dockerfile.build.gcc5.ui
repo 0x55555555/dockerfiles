@@ -1,6 +1,0 @@
-# registry.gitlab.com/jorjpimm/dockerfiles/build.gcc5.ui
-
-FROM registry.gitlab.com/jorjpimm/dockerfiles/build.gcc5
-
-ADD install_ui_dependencies.sh /install_ui_dependencies.sh
-#RUN chmod +x /install_ui_dependencies.sh && /install_ui_dependencies.sh
