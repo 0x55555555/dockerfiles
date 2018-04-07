@@ -13,8 +13,8 @@ RUN ./install_python3.sh
 ADD tools/install_gcc.sh ./install_gcc.sh
 RUN ./install_gcc.sh 5
 
-ADD tools/install_boost.sh ./install_boost.sh
-RUN ./install_boost.sh gcc
+#ADD tools/install_boost.sh ./install_boost.sh
+#RUN ./install_boost.sh gcc
 
 ADD tools/install_qt.sh ./install_qt.sh
 RUN ./install_qt.sh
