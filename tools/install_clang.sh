@@ -18,11 +18,16 @@ apt-get update
 
 apt-get install -y -qq --no-install-recommends \
   clang-${VERSION_NUMBER} \
-  lld-${VERSION_NUMBER}
+  lld-${VERSION_NUMBER} \
+  clang-tools-${VERSION_NUMBER}
 
 # Update selection
 update-alternatives --install /usr/bin/clang clang /usr/bin/clang-${VERSION_NUMBER} 60 \
     --slave /usr/bin/clang++ clang++ /usr/bin/clang++-${VERSION_NUMBER}
 
+update-alternatives --install /usr/bin/cc cc /usr/bin/clang 60
+update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 60
+
 apt-get -qq purge --auto-remove -y software-properties-common
 rm -rf /var/lib/apt/lists/*
+

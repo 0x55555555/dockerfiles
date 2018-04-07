@@ -20,6 +20,9 @@ apt install -y -qq --no-install-recommends \
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-${VERSION} 60 \
     --slave /usr/bin/g++ g++ /usr/bin/g++-${VERSION}
 
+update-alternatives --install /usr/bin/cc cc /usr/bin/gcc 60
+update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++ 60
+
 apt-get -qq purge --auto-remove -y software-properties-common
 rm -rf /var/lib/apt/lists/*
 
